@@ -40,7 +40,7 @@ class Posts extends Provider
                     'updated' => $post->date,
                     'summary' => $post->contents,
                     'link' => $post->url,
-                    'author' => 'Sebastian De Deyne',
+                    'author' => 'Pepe García',
                 ];
             });
         });
@@ -60,6 +60,7 @@ class Posts extends Provider
                 $date = Carbon::createFromFormat('Y-m-d', $date);
 
                 $document = YamlFrontMatter::parse($this->disk->get($path));
+                dump($document->tags);
 
                 return (object) [
                     'path' => $path,
@@ -68,6 +69,7 @@ class Posts extends Provider
                     'url' => route('posts.show', [$date->format('Y'), $slug]),
                     'title' => $document->title,
                     'subtitle' => $document->subtitle,
+                    'tags' => is_null($document->tags) ? [] : explode(':', $document->tags),
                     'original_publication_name' => $document->original_publication_name,
                     'original_publication_url' => $document->original_publication_url,
                     'read_more_text' => $document->read_more_text,

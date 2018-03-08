@@ -1,0 +1,19 @@
+h1, h2, h3, h4, h5, h5 {
+  @apply .text-grey-darkest .font-sans;
+}
+
+p, table {
+  @apply .text-grey-darkest .leading-normal .text-xl .font-serif;
+}
+
+a {
+  @apply .text-blue-light;
+}
+
+button {
+  transition: background-color 0.5s ease;
+}
+
+.turbolinks-progress-bar {
+  background-color: config('colors.indigo');
+}

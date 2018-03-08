@@ -16,9 +16,9 @@ return [
              */
             'url' => '/feed',
 
-            'title' => 'Sebastian De Deyne',
+            'title' => 'Pepe García',
 
-            'description' => 'Full-stack developer working at Spatie in Antwerp, Belgium. I write about php, javascript, and programming in general.',
+            'description' => 'Desarrollador web en España. Escribo de todo un poco.',
         ],
     ],
 

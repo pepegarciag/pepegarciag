@@ -2,8 +2,7 @@
     $showHomeLink = $showHomeLink ?? request()->path() !== '/';
 
     $title = $title ?? array_random([
-        '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
-        'Peculiar.', 'Uh oh.', 'Whoops!',
+        '¯\_(ツ)_/¯', 'Ouch!.', 'Vaya...', 'Hmmm...', 'Oh no!',  'Uh oh.', 'Whoops!',
     ]);
 @endphp
 
@@ -20,7 +19,7 @@
         </p>
         @if($showHomeLink)
             <a href="{{ url('/') }}" class="button">
-                Go home
+                Inicio
             </a>
         @endunless
     </section>

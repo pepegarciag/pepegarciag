@@ -1,15 +1,6 @@
 /**
- * GitHub Gist Theme
- * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
- */
-
-.hljs {
-  display: block;
-  background: white;
-  padding: 0.5em;
-  color: #333333;
-  overflow-x: auto;
-}
+* GitHub Gist Theme
+* Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro */
 
 .hljs-comment,
 .hljs-meta {
@@ -68,4 +59,28 @@
 
 .hljs-link {
   text-decoration: underline;
+}
+
+pre {
+  @apply .mt-8 .mb-8;
+}
+
+pre code {
+  @apply .text-base .leading-normal .font-mono .p-8 .block .rounded-sm .border .border-solid .border-grey-light .bg-grey-lightest .shadow;
+}
+
+@media (max-width: 600px) {
+  pre code {
+    margin-left: -14.5px;
+    margin-right: -14.5px;
+    padding: 14.5px;
+    padding-right: 7.25px;
+    font-size: .8em;
+    border-left: none;
+    border-right: none
+  }
+}
+
+p code {
+  @apply .bg-blue-lightest .text-blue .pr-1 .pl-1;
 }

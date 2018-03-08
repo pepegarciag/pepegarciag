@@ -6,13 +6,6 @@ use App\Content\Posts;
 
 class PostsController
 {
-    public function index(Posts $posts)
-    {
-        return view('posts.index', [
-            'paginator' => $posts->paginate(20),
-        ]);
-    }
-
     public function page($page, Posts $posts)
     {
         return view('posts.index', [
@@ -22,6 +15,7 @@ class PostsController
 
     public function show($year, $slug, Posts $posts)
     {
+        setlocale(LC_TIME, 'es_ES');
         return view('posts.show', [
             'post' => $posts->find($year, $slug),
         ]);

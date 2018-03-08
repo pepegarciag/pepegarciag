@@ -1,12 +1,13 @@
-<div class="little-seperator"></div>
-<footer class="footer">
-    <div>
+<footer class="footer mt-4 border-t-2 border-grey-lighter flex w-full p-4">
+    <div class="w-1/2">
         © {{ carbon()->format('Y') }}
-        <a href="{{ url('about') }}">Sebastian De Deyne</a>
+        <a href="{{ url('/') }}" class="no-underline">Pepe García</a>
     </div>
-    <a href="{{ url('feed') }}" data-turbolinks="false" class="footer__rss">
-        <span class="icon -xs" title="RSS">
-            {{ svg('rss') }}
-        </span>
-    </a>
+    <div class="w-1/2 text-right">
+        <a href="{{ url('feed') }}" data-turbolinks="false" class="footer__rss">
+            <span class="icon -xs" title="RSS">
+                {{ svg('rss') }}
+            </span>
+        </a>
+    </div>
 </footer>

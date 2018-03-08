@@ -1,0 +1,114 @@
+.post {
+  &--card {
+    @apply .px-6 .py-5 .justify-center .mx-auto;
+
+    &__info {
+      @apply .inline-flex .items-center .flex-wrap;
+
+      &__date {
+        @apply .font-bold .text-sm .text-grey-darker .uppercase .mb-2 .pt-2 .pr-2;
+      }
+
+      &__tags {
+        @apply .py-2;
+
+        @screen sm {
+          @apply .px-6 .py-4;
+        }
+      }
+
+      &__tag {
+        @apply .inline-block .bg-grey-lightest .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-indigo .mr-2;
+      }
+    }
+
+    &__title {
+      @apply .font-bold .text-xl .mb-2;
+    }
+
+    &__content {
+      @apply .text-grey-darker .text-base .leading-normal .py-4 .pt-1 .hidden;
+
+      @screen sm {
+        @apply .block;
+      }
+
+      & a {
+        @apply .no-underline .text-blue .border-b-2 .border-blue-lighter;
+      }
+    }
+
+    &__read-more {
+      @apply .pt-1 .block .no-underline .border-blue-lightest;
+    }
+  }
+
+  &--full {
+    @apply .mx-auto .py-8 .flex .content-start .flex-wrap;
+
+    &__header {
+      &__meta {
+        @apply .inline-flex .items-center .flex-wrap;
+
+        &__date {
+          @apply .font-bold .text-sm .text-grey-darker .uppercase .mb-2 .pt-2 .pr-2;
+        }
+
+        &__tags {
+          @apply .py-2;
+
+          @screen sm {
+            @apply .px-6 .py-4;
+          }
+        }
+
+        &__tag {
+          @apply .inline-block .bg-grey-lightest .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-indigo .mr-2;
+        }
+      }
+
+      &__title {
+        @apply .text-grey-darkest;
+      }
+    }
+
+    &__body {
+      @apply .mt-4;
+    }
+  }
+}
+
+
+.blognote {
+  @apply .bg-orange-lightest .text-orange .mt-4 .mb-4 .pt-4 .pr-8 .pb-4 .pl-8 .font-serif;
+}
+
+blockquote {
+  @apply .bg-grey-lightest .mt-8 .mb-8 .p-8 .font-serif .text-lg .italic .leading-normal .text-center .rounded-sm .border .border-solid .border-grey-light .shadow;
+}
+
+@responsive {
+  .blogimage {
+    @apply .ml-auto .mr-auto .mt-8 .mb-8 .text-center .block;
+  }
+}
+
+article ul {
+  @apply .mt-8 .mb-8;
+}
+
+li {
+  @apply .text-grey-darkest .leading-normal .text-xl .font-serif;
+}
+
+@media screen and (min-width: 768px) and (max-height: 790px) {
+  .blogsummary {
+    @apply .truncate;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-height: 650px) {
+  p.blogsummary {
+    @apply .hidden;
+  }
+}
