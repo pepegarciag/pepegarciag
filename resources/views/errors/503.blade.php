@@ -1,5 +1,5 @@
 @include('errors.error', [
-    'title' => 'Be Right Back!',
-    'message' => 'Just doing some quick maintenance.',
+    'title' => 'Estaremos pronto de vuelta!',
+    'message' => 'Solo es un pequeño mantenimiento.',
     'showHomeLink' => false,
 ])

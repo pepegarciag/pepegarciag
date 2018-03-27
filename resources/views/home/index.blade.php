@@ -27,7 +27,7 @@
                     {!! $post->summary !!}
                 </div>
 
-                <a href="#" class="post--card__read-more">Leer más</a>
+                <a href="{{ $post->url }}" class="post--card__read-more">Leer más</a>
 
             </div>
 

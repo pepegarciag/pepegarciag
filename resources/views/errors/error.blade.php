@@ -10,11 +10,11 @@
     'title' => $title,
     'header' => false,
 ])
-    <section class="error">
-        <h1 class="error__title">
+    <section class="error flex items-center justify-center content-center h-screen flex-col">
+        <h1 class="error__title my-4">
             {{ $title }}
         </h1>
-        <p class="error__message">
+        <p class="error__message my-4">
             {{ $message }}
         </p>
         @if($showHomeLink)
