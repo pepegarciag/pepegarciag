@@ -60,7 +60,6 @@ class Posts extends Provider
                 $date = Carbon::createFromFormat('Y-m-d', $date);
 
                 $document = YamlFrontMatter::parse($this->disk->get($path));
-                dump($document->tags);
 
                 return (object) [
                     'path' => $path,
