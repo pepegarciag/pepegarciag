@@ -17,6 +17,12 @@ mix.js('resources/assets/js/site.js', 'public/js')
     .options({
         processCssUrls: false,
         postCss: [tailwindcss('tailwind.js')],
+    })
+    .webpackConfig({
+        output: {
+            publicPath: '/',
+            chunkFilename: 'js/[name].js'
+        }
     });
 
 mix.version();
