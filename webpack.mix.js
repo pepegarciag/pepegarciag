@@ -13,16 +13,10 @@ var tailwindcss = require('tailwindcss');
  */
 
 mix.js('resources/assets/js/site.js', 'public/js')
-    mix.sass('resources/assets/sass/main.scss', 'public/css')
+    mix.sass('resources/assets/sass/main.scss', 'public/css/')
     .options({
         processCssUrls: false,
         postCss: [tailwindcss('tailwind.js')],
-    })
-    .webpackConfig({
-        output: {
-            publicPath: '/',
-            chunkFilename: 'js/[name].js'
-        }
     });
 
 mix.version();
